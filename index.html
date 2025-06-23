@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés Leonardo Nieto: Mi Historia y Perfil Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos CSS - INICIO */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6; /* Fondo gris claro */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 40px;
+            background-color: #fff;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-image-top {
+            display: block;
+            margin: 20px auto 30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50; /* Teal oscuro elegante para encabezados */
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.0em;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e0e0e0;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: #34495e;
+        }
+
+        h3 {
+            font-size: 1.6em;
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            color: #555;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        strong {
+            color: #008080; /* Teal más brillante para resaltar */
+            font-weight: 700;
+        }
+
+        .section-highlight {
+            background-color: #e0f2f1; /* Fondo teal muy claro para destacar secciones */
+            padding: 30px;
+            border-left: 8px solid #008080;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .section-highlight h2 {
+            margin-top: 0;
+            color: #008080;
+            border-bottom: none;
+            padding-bottom: 0;
+            cursor: pointer; /* Indica que es clicable */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-highlight h2::after {
+            content: '+'; /* Ícono para indicar que se puede abrir */
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .section-highlight h2.active::after {
+            content: '-'; /* Ícono cuando está abierto */
+            transform: rotate(0deg); /* No rotar, solo cambiar a menos */
+        }
+
+        .section-content {
+            max-height: 0; /* Inicialmente oculto */
+            overflow: hidden;
+            transition: max-height 0.5s ease-out; /* Transición suave */
+            padding-top: 0; /* Asegura que no haya padding visible cuando está cerrado */
+        }
+
+        .section-content.open {
+            max-height: 500px; /* Suficiente altura para mostrar el contenido */
+            padding-top: 20px; /* Padding cuando está abierto */
+        }
+
+        .contact-info {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-image-bottom {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        .linkedin-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .linkedin-link:hover {
+            color: #0056b3;
+        }
+
+        /* Estilos específicos para la imagen en "Hitos Relevantes" */
+        .hitos-section {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            align-items: center;
+            gap: 30px; /* Espacio entre el texto y la imagen */
+            margin-bottom: 30px;
+        }
+
+        .hitos-section img {
+            max-width: 200px; /* Ajusta el tamaño máximo de la imagen */
+            height: auto;
+            border-radius: 8px; /* Opcional: bordes redondeados */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra */
+        }
+
+        .hitos-section .text-content {
+            flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 30px;
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 2.0em;
+                margin-bottom: 30px;
+            }
+            h2 {
+                font-size: 1.6em;
+                margin-top: 30px;
+            }
+            h3 {
+                font-size: 1.3em;
+                margin-top: 20px;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            ul {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+            .section-highlight {
+                padding: 20px;
+                margin-top: 30px;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .profile-image-bottom {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+            .hitos-section {
+                flex-direction: column; /* Apila la imagen y el texto en móviles */
+                align-items: center;
+                gap: 15px;
+            }
+            .hitos-section img {
+                max-width: 150px; /* Ajusta el tamaño de la imagen en móviles */
+            }
+        }
+        /* Estilos CSS - FIN */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="andresNieto.png" alt="Foto de Perfil de Andrés Nieto" class="profile-image-top">
+        <h1>Andrés Leonardo Nieto, Historia y Visión Estratégica</h1>
+
+        <p>Mi nombre es Andrés Leonardo Nieto. Nací y crecí en La Dorada, Caldas, en el seno de una familia cálida y unida. Como el menor de tres hermanos, fui guiado desde temprana edad por <strong>valores esenciales como el respeto, la responsabilidad y el compromiso</strong>, principios que han sido el pilar de cada paso en mi vida.</p>
+        
+        <p>Hoy, a mis 31 años, soltero y sin hijos, mantengo una visión clara sobre mi rumbo. Me considero una persona <strong>tranquila, empática y proactiva</strong>, con gran afinidad por el aprendizaje autónomo y la tecnologia. Disfruto cultivar amistades, compartir con mi familia y mantenerme en movimiento a través del deporte como la calistenia y el tenis.</p>
+
+
+        <p>En 2017, impulsado por circunstancias familiares y un fuerte deseo de crecimiento, me trasladé a Bogotá. Esta ciudad, llena de retos y oportunidades, se convirtió en el escenario donde decidí apostar por mis sueños.      
+        </p>
+
+        <h2>Hitos Relevantes</h2>
+        <div class="hitos-section">
+           <div class="text-content">
+                <p>La experiencia de aprender a vivir de manera independiente tras este traslado, especialmente después de enfrentar el fallecimiento de mi madre, fue un punto de inflexión que forjó mi <strong>resiliencia y autonomía</strong></p> 
+                    <p>Además, mi visión de superación me llevó a iniciar mi propio emprendimiento, una experiencia que me brindó una perspectiva invaluable sobre la gestión, las relaciones personales y la adaptabilidad.</p>
+            </div>
+        </div>
+
+
+        <h2>Mis Proyectos y la Conexión con el Futuro Profesional</h2>
+        <p>Mis metas personales y profesionales son un reflejo de mi compromiso con mi desarrollo integral:</p>
+
+        <h3>Ámbito Personal</h3>
+        <ul>
+            <li><strong>Corto plazo:</strong> Finalizar el pregrado en Administración de Empresas y alcanzar un nivel avanzado de Inglés.</li>
+            <li><strong>Mediano plazo:</strong> - Asegurar la estabilidad económica de mi padre. - Aprender a tocar guitarra eléctrica y conocer Australia.</li>
+            <li><strong>Largo plazo:</strong> Construir una familia (esposa e hijos) y un hogar.</li>
+            </ul>
+
+        <h3>Ámbito Profesional</h3>
+        <ul>
+            <li><strong>Corto plazo:</strong> Realizar una especialización en Supply Chain.</li>
+            <li><strong>Mediano plazo:</strong> Desarrollar un nivel superior de Portugués.</li>
+            <li><strong>Largo plazo:</strong> Emprender nuevamente y consolidar una empresa que genere empleo y valor en la sociedad.</li>
+        </ul>
+        <p>Estos proyectos son la hoja de ruta que guía mi esfuerzo diario y mi deseo de aplicar mis capacidades en entornos que valoren la proactividad y la visión a largo plazo.</p>
+
+       
+        <h2>Mis Habilidades: Visión Estratégica y Competencia Integral</h2>
+         <img src="herramientas tecnologicas.jpg" alt="Imagen Representativa del Hito de Vida" class="hitos-image">
+        <p>A lo largo de los años, he desarrollado un <strong>sólido conjunto de habilidades que trascienden lo técnico</strong>, lo cual me permite abordar desafíos de manera integral:</p>
+        <ul>
+            <li><strong>Pienso de forma estratégica y analítica</strong>, potenciado por mi dominio de herramientas clave como <strong>Power BI y SQL</strong> para la gestión y análisis de datos.</li>
+            <li>Me comunico con <strong>claridad y asertividad</strong>, facilitando la colaboración efectiva y el <strong>trabajo en equipo</strong>.</li>
+            <li>Defiendo firmemente causas que promueven la justicia y la transparencia, aplicando un enfoque ético en el uso y manejo de la información.</li>
+        </ul>
+        <p>Cada experiencia, desafío y logro ha contribuido a formar un perfil profesional <strong>versátil, ético y comprometido con la mejora continua</strong>, siempre listo para contribuir de manera proactiva.
+        </p>
+
+        <div class="section-highlight">
+            <h2 id="whyHireMeToggle">¿Por qué contratar a Andrés Nieto?</h2>
+            <div class="section-content" id="whyHireMeContent">
+                <p>Deberían contratarme porque soy una persona profundamente <strong>comprometida, responsable y honesta</strong>, y me he caracterizado por desarrollar no solo una <strong>visión estratégica</strong>, sino también sólidas <strong>habilidades blandas</strong> como la <strong>comunicación efectiva</strong> y el <strong>trabajo en equipo</strong>. Busco un entorno profesional donde pueda aplicar activamente estas capacidades para <strong>contribuir directamente al éxito de la empresa</strong>.</p>
+            </div>
+        </div>
+
+        <div class="section-highlight">
+            <h2 id="whatICanContributeToggle">¿Qué puedo aportar a mi cargo?</h2>
+            <div class="section-content" id="whatICanContributeContent">
+                <p>Gracias a mi <strong>experiencia directa en el cargo</strong>, mi curva de aprendizaje sería <strong>mínima o casi inmediata</strong>, lo que me permitirá integrarme rápidamente. Aportaría una <strong>visión estratégica</strong> para comprender a fondo los objetivos de la empresa, <strong>anticipar retos</strong> y proponer <strong>soluciones tecnológicas y viables</strong> que contribuyan directamente a la <strong>eficiencia y el crecimiento</strong> del área.</p>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <img src="andres Nieto.png" alt="Foto de Perfil de Andrés Nieto" class="profile-image-bottom">
+            <a href="www.linkedin.com/in/andresnieto93" target="_blank" class="linkedin-link">Visitar mi perfil de LinkedIn</a>
+        </div>
+    </div>
+
+    <script>
+        /* JavaScript - INICIO */
+        document.addEventListener('DOMContentLoaded', function() {
+            const whyHireMeToggle = document.getElementById('whyHireMeToggle');
+            const whyHireMeContent = document.getElementById('whyHireMeContent');
+            const whatICanContributeToggle = document.getElementById('whatICanContributeToggle');
+            const whatICanContributeContent = document.getElementById('whatICanContributeContent');
+
+            // Función para alternar la visibilidad y la clase 'active'
+            function toggleSection(header, content) {
+                header.classList.toggle('active');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null; // Cierra la sección
+                } else {
+                    // Abre la sección, usa scrollHeight para obtener la altura completa del contenido
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            }
+
+            // Ocultar inicialmente las secciones al cargar la página
+            whyHireMeContent.style.maxHeight = null;
+            whatICanContributeContent.style.maxHeight = null;
+
+            // Añadir event listeners para los clics
+            whyHireMeToggle.addEventListener('click', function() {
+                toggleSection(whyHireMeToggle, whyHireMeContent);
+            });
+
+            whatICanContributeToggle.addEventListener('click', function() {
+                toggleSection(whatICanContributeToggle, whatICanContributeContent);
+            });
+        });
+        /* JavaScript - FIN */
+    </script>
+</body>
+</html>
