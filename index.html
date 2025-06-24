@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés Leonardo Nieto: Perfil Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Paleta de Colores Sugerida:
+        #2c3e50 - Azul oscuro casi negro (texto principal, fondo header/footer)
+        #34495e - Gris azulado oscuro (títulos secundarios)
+        #008080 - Teal (acentos, botones)
+        #e0f2f1 - Teal muy claro (fondos de sección ligera)
+        #f8f8f8 - Gris muy claro (fondo general)
+        #ffffff - Blanco (fondo de tarjetas, container principal)
+        #6c7a89 - Gris medio (texto secundario)
+        */
+
+        /* Estilos Generales y Reseteo */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Fondo gris muy claro */
+            color: #2c3e50; /* Texto principal azul oscuro */
+        }
+
+        .main-content {
+            max-width: 1000px; /* Un poco más ancho para modernidad */
+            margin: 0 auto;
+            background-color: #ffffff; /* Fondo blanco */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra más sutil */
+            border-radius: 10px; /* Bordes ligeramente redondeados */
+            overflow: hidden; /* Para contener los elementos flotantes */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif; /* Fuente más destacada para títulos */
+            color: #2c3e50; /* Azul oscuro para encabezados */
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-align: center; /* Centrar títulos por defecto */
+        }
+
+        h1 {
+            font-size: 3.8em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: none; /* Sin borde inferior para h1 */
+            color: #ffffff; /* Blanco para el hero */
+        }
+
+        h2 {
+            font-size: 2.5em;
+            border-bottom: none; /* Sin borde inferior para h2 */
+            padding-bottom: 0;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: #34495e; /* Gris azulado oscuro */
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: #34495e;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #6c7a89; /* Gris medio para texto de párrafo */
+            text-align: justify;
+            padding: 0 40px; /* Padding para el texto */
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 60px;
+            margin-bottom: 20px;
+            color: #6c7a89;
+            padding-right: 40px; /* Ajuste para responsividad */
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #008080; /* Teal para resaltar */
+            font-weight: 600; /* Menos negrita, más suave */
+        }
+
+        /* --- Header y Navegación --- */
+        .main-header {
+            background-color: #2c3e50; /* Azul oscuro */
+            color: #ffffff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra más ligera */
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .main-nav .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.9em;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-left: 30px;
+        }
+
+        .main-nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding: 5px 0;
+            position: relative; /* Para el efecto de subrayado */
+        }
+
+        .main-nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #008080;
+            transition: width 0.3s ease;
+        }
+
+        .main-nav ul li a:hover::after {
+            width: 100%;
+        }
+        .main-nav ul li a:hover {
+            color: #008080; /* Teal al pasar el mouse */
+        }
+
+        /* --- Sección Hero (Inicio) --- */
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 40px; /* Mayor padding para sensación de amplitud */
+            background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)), url('fondo_profesional.jpg') no-repeat center center/cover; /* Fondo oscuro sutil */
+            color: #ffffff;
+            text-align: center;
+            border-radius: 10px 10px 0 0; /* Bordes superiores redondeados */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 30px;
+        }
+
+        .hero-text h1 {
+            font-size: 4.5em; /* Título principal aún más grande */
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3); /* Sutil sombra de texto */
+        }
+
+        .hero-text p {
+            font-size: 1.6em;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+            text-align: center; /* Centrar el subtítulo */
+            padding: 0; /* Remover padding para que el texto sea más ancho */
+        }
+
+        .hero-image-container {
+            flex: 0 0 auto;
+            text-align: center;
+            padding: 0 30px;
+        }
+
+        .profile-image-hero {
+            width: 220px; /* Foto más grande */
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+            border: 6px solid #008080; /* Borde con tu color de acento */
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image-hero:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: #008080; /* Teal para el botón */
+            color: #ffffff;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: 700;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cta:hover {
+            background-color: #006666;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* --- Secciones Generales --- */
+        .section-container {
+            padding: 80px 40px; /* Mayor padding para secciones */
+        }
+
+        .bg-light {
+            background-color: #e0f2f1; /* Fondo muy claro para secciones destacadas */
+            padding: 80px 40px; /* Padding consistente */
+        }
+
+        /* --- Sección Hitos Relevantes (Nueva estructura) --- */
+        .hitos-section-new {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centrar contenido horizontalmente */
+            align-items: center;
+            gap: 60px; /* Mayor espacio entre elementos */
+            padding: 30px 0;
+        }
+
+        .hitos-section-new .hitos-image-new {
+            max-width: 350px; /* Imagen más grande */
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+            object-fit: cover;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .hitos-section-new .hitos-image-new:hover {
+            transform: scale(1.03);
+        }
+
+        .hitos-section-new .text-content {
+            flex-grow: 1;
+            min-width: 320px;
+            max-width: 600px; /* Limitar ancho del texto */
+        }
+
+        .hitos-section-new .text-content p {
+            padding: 0; /* Remover padding para el texto dentro de esta sección */
+            font-size: 1.05em;
+        }
+
+        /* --- Sección Habilidades (Grid) --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px; /* Mayor espacio entre tarjetas */
+            margin-top: 50px;
+            padding: 0 40px;
+        }
+
+        .skill-item {
+            background-color: #ffffff;
+            padding: 40px; /* Mayor padding */
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.09); /* Sombra suave */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #008080; /* Línea de acento arriba */
+        }
+
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .skill-icon {
+            width: 90px; /* Iconos más grandes */
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 25px;
+        }
+
+        .skill-item h3 {
+            margin-top: 0;
+            font-size: 1.6em;
+            color: #2c3e50;
+        }
+
+        .skill-item p {
+            font-size: 1em;
+            color: #6c7a89;
+            padding: 0;
+        }
+
+        .skill-summary {
+            margin-top: 50px;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #444;
+            padding: 0 40px;
+        }
+
+        /* --- Sección Metas y Proyectos (Grid) --- */
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px; /* Mayor espacio */
+            margin-top: 50px;
+            padding: 0 40px;
+        }
+
+        .goal-category {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+            text-align: left;
+            border-bottom: 4px solid #008080; /* Línea de acento abajo */
+        }
+
+        .goal-category h3 {
+            text-align: left;
+            color: #008080;
+            margin-bottom: 25px;
+        }
+
+        .goal-category ul {
+            list-style-type: '— '; /* Guiones como bullets */
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        .goal-category ul li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .goal-summary {
+            margin-top: 50px;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #444;
+            padding: 0 40px;
+        }
+
+        /* --- Estilos para Secciones Colapsables (Accordion) --- */
+        .section-highlight {
+            background-color: #f8f8f8; /* Fondo más sutil */
+            padding: 35px; /* Padding ligeramente ajustado */
+            border-left: 6px solid #008080; /* Borde más delgado */
+            border-radius: 8px;
+            margin-top: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra muy sutil */
+        }
+
+        .section-highlight h2 {
+            margin-top: 0;
+            color: #008080;
+            border-bottom: none;
+            padding-bottom: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-size: 1.8em; /* Tamaño de h2 en acordeón */
+            font-family: 'Open Sans', sans-serif; /* Unificar fuente si es posible */
+        }
+
+        .section-highlight h2::after {
+            content: '+';
+            font-size: 1.3em; /* Icono más grande */
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            color: #008080;
+        }
+
+        .section-highlight h2.active::after {
+            content: '-';
+            transform: rotate(0deg);
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding-top 0.5s ease-out;
+            padding-top: 0;
+        }
+
+        .section-content.open {
+            max-height: 600px; /* Suficiente altura para el contenido */
+            padding-top: 25px; /* Padding cuando está abierto */
+        }
+
+        .section-content p {
+            padding: 0;
+            font-size: 1.05em;
+        }
+
+        /* --- Sección de Contacto con iconos --- */
+        .contact-section-new {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 60px; /* Mayor espacio entre los enlaces */
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-icon-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #34495e; /* Gris azulado oscuro */
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-icon-link:hover {
+            color: #008080; /* Teal al pasar el mouse */
+            transform: translateY(-8px);
+        }
+
+        .contact-icon {
+            width: 70px; /* Iconos más grandes */
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra sutil */
+            padding: 5px; /* Pequeño padding si el icono no ocupa todo el círculo */
+            background-color: #ffffff; /* Fondo blanco para iconos */
+        }
+
+        /* --- Footer --- */
+        .main-footer {
+            background-color: #2c3e50; /* Azul oscuro */
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+
+        /* --- Media Queries (Responsividad) --- */
+        @media (max-width: 992px) {
+            .main-content {
+                margin: 0 20px;
+                padding: 0 30px 30px 30px;
+            }
+            .hero-section {
+                padding: 80px 20px;
+            }
+            .hero-text h1 {
+                font-size: 3.5em;
+            }
+            .hero-text p {
+                font-size: 1.4em;
+            }
+            .profile-image-hero {
+                width: 180px;
+                height: 180px;
+            }
+            .main-nav ul li {
+                margin-left: 20px;
+            }
+            .section-container {
+                padding: 60px 0;
+            }
+            .bg-light {
+                padding: 60px 30px;
+            }
+            p {
+                padding: 0 30px;
+            }
+            ul {
+                margin-left: 50px;
+                padding-right: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 0 15px;
+                padding: 0 20px 20px 20px;
+            }
+            h1 {
+                font-size: 2.8em;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-size: 2em;
+                margin-top: 40px;
+                margin-bottom: 25px;
+            }
+            h3 {
+                font-size: 1.5em;
+                margin-top: 25px;
+            }
+            p {
+                font-size: 0.95em;
+                padding: 0 15px;
+            }
+            ul {
+                margin-left: 30px;
+                padding-right: 15px;
+            }
+
+            /* Navegación responsiva */
+            .main-nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            .main-nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .main-nav ul li {
+                margin: 5px 10px;
+            }
+
+            /* Hero responsivo */
+            .hero-section {
+                flex-direction: column;
+                padding: 60px 10px;
+            }
+            .hero-text {
+                order: 2;
+                padding-top: 20px;
+            }
+            .hero-image-container {
+                order: 1;
+            }
+            .profile-image-hero {
+                width: 150px;
+                height: 150px;
+                border-width: 4px; /* Borde más delgado en móvil */
+            }
+            .hero-text h1 {
+                font-size: 2.8em;
+            }
+            .hero-text p {
+                font-size: 1.2em;
+            }
+            .btn-cta {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+
+            /* Hitos responsivos */
+            .hitos-section-new {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .hitos-section-new .hitos-image-new {
+                max-width: 280px;
+            }
+
+            /* Habilidades y Metas responsivas */
+            .skills-grid,
+            .goals-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+            .skill-item, .goal-category {
+                padding: 30px;
+            }
+            .skill-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            /* Contacto responsivo */
+            .contact-links {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+            h3 {
+                font-size: 1.3em;
+            }
+            .main-nav .logo {
+                font-size: 1.5em;
+            }
+            .profile-image-hero {
+                width: 100px;
+                height: 100px;
+            }
+            .hero-text h1 {
+                font-size: 2.2em;
+            }
+            .hero-text p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo">Andrés L. Nieto</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Metas y Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="inicio" class="hero-section">
+            <div class="hero-text">
+                <h1>Andrés Leonardo Nieto</h1>
+                <p>Visión Estratégica y Competencia Integral.</p>
+                <a href="#contacto" class="btn-cta">¡Contacto!</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="andresNieto.png" alt="Foto de Perfil de Andrés Nieto" class="profile-image-hero">
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="section-container">
+            <h2>Sobre Mí: Mi Historia</h2>
+            <p>Mi nombre es Andrés Leonardo Nieto. Nací y crecí en La Dorada, Caldas, en el seno de una familia cálida y unida. Como el menor de tres hermanos, fui guiado desde temprana edad por <strong>valores esenciales como el respeto, la responsabilidad y el compromiso,</strong> principios que han sido el pilar de cada paso en mi vida.</p>
+            <p>Hoy, a mis 31 años, soltero y sin hijos, mantengo una visión clara sobre mi rumbo. Me considero una persona <strong>comprometidad y ordenada,</strong> con gran afinidad por el aprendizaje autónomo y la tecnología. Disfruto cultivar amistades, compartir con mi familia y mantenerme en movimiento a través del deporte como la calistenia y el tenis.</p>
+            <p>En 2017, impulsado por circunstancias familiares y un fuerte deseo de crecimiento, me trasladé a Bogotá. Esta ciudad, llena de retos y oportunidades, se convirtió en el escenario donde decidí apostar por mis sueños.</p>
+        </section>
+
+        <section class="section-container bg-light">
+            <h2>Hitos Relevantes</h2>
+            <div class="hitos-section-new">
+                <div class="text-content">
+                    <p>La experiencia de aprender a vivir de manera independiente tras este traslado, especialmente después de enfrentar el fallecimiento de mi madre, fue un punto de inflexión que forjó mi resiliencia y autonomía**.</p>
+                    <p>Mi visión de superación me llevó a iniciar mi propio emprendimiento, una experiencia que me brindó una perspectiva invaluable sobre la gestión, las relaciones personales y la adaptabilidad.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="proyectos" class="section-container bg-light">
+            <h2>Metas y proyectos</h2>
+            <p>Mis metas personales y profesionales son un reflejo de mi compromiso con mi desarrollo integral:</p>
+
+            <div class="goals-grid">
+                <div class="goal-category">
+                    <h3>Ámbito Personal</h3>
+                    <ul>
+                        <li><Strong>Corto plazo:</Strong>Finalizar el pregrado en Administración de Empresas y alcanzar un nivel avanzado de Inglés.</li>
+                        <li><strong>Mediano plazo:</strong> Asegurar la estabilidad económica de mi padre; Aprender a tocar guitarra eléctrica y conocer Australia.</li>
+                        <li><Strong>Largo plazo:</Strong> Construir una familia (esposa e hijos) y un hogar.</li>
+                    </ul>
+                </div>
+                <div class="goal-category">
+                    <h3>Ámbito Profesional</h3>
+                    <ul>
+                        <li><strong>Corto plazo:</strong> Realizar una especialización en Supply Chain.</li>
+                        <li> <strong>Mediano plazo:</strong> Desarrollar un nivel superior de Portugués.</li>
+                        <li><strong>Largo plazo:</strong> Emprender nuevamente y consolidar una empresa que genere empleo y valor en la sociedad.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="goal-summary">Estos proyectos son la hoja de ruta que guía mi esfuerzo diario y mi deseo de aplicar mis capacidades en entornos que valoren la proactividad y la visión a largo plazo.</p>
+        </section>
+<section id="habilidades" class="section-container">
+            <h2>Mis Habilidades</h2>
+            <p>A lo largo de los años, he desarrollado un sólido conjunto de habilidades que trascienden lo técnico**, lo cual me permite abordar desafíos de manera integral:</p>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-chart-line skill-icon" style="color: #008080;"></i>
+                    <h3>Pensamiento Estratégico y Analítico</h3>
+                    <p>Potenciado por mi dominio de herramientas clave como<Strong>Power BI</Strong> y <strong>SQLquery para la gestión y análisis de datos.</strong></p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-comments skill-icon" style="color: #008080;"></i>
+                    <h3>Comunicación y Trabajo en Equipo</h3>
+                    <p>Me comunico con claridad y asertividad, facilitando la colaboración efectiva y el <strong>trabajo en equipo.</strong></p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-handshake skill-icon" style="color: #008080;"></i>
+                    <h3>Ética y Transparencia</h3>
+                    <p>Defiendo firmemente causas que promueven la justicia y la transparencia, aplicando un enfoque ético en el uso y <strong>manejo de la información.</strong></p>
+                </div>
+            </div>
+            <p class="skill-summary">Cada experiencia, desafío y logro ha contribuido a formar un perfil profesional **versátil, ético y comprometido con la mejora continua**, siempre listo para contribuir de manera proactiva.</p>
+        </section>
+
+        <section class="section-container">
+            <div class="section-highlight">
+                <h2 id="whyHireMeToggle">¿Por qué contratar a Andrés Nieto?</h2>
+                <div class="section-content" id="whyHireMeContent">
+                    <p>Deberían contratarme porque soy una persona profundamente <strong>responsable</strong> y honesta, y me he caracterizado por desarrollar no solo una visión estratégica, sino también sólidas habilidades blandas como la comunicación efectiva y el trabajo en equipo. Busco un entorno profesional donde pueda aplicar activamente estas capacidades para contribuir directamente al éxito de la empresa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-highlight" style="margin-top: 30px;">
+                <h2 id="whatICanContributeToggle">¿Qué puedo aportar a mi cargo?</h2>
+                <div class="section-content" id="whatICanContributeContent">
+                    <p>Gracias a mi <Strong>experiencia directa en el cargo</Strong>, mi curva de aprendizaje sería menor o casi inmediata, lo que me permitirá integrarme rápidamente. Aportaría una visión estratégica para comprender a fondo los objetivos de la empresa, anticipar retos y proponer <strong>soluciones tecnológicas y viables</strong> que contribuyan directamente a la eficiencia y el crecimiento del área.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section-container bg-light contact-section-new">
+            <h2>Hablemos</h2>
+            <p>Estoy disponible para nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!</p>
+            <div class="contact-links">
+                <a href="andleosierra@gmail.com" target="_blank" class="contact-icon-link">
+                    <i class="fas fa-envelope contact-icon" style="color: #008080;"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/andresnieto93" target="_blank" class="contact-icon-link">
+                    <i class="fab fa-linkedin contact-icon" style="color: #008080;"></i>
+                    <span>LinkedIn</span>
+                </a>
+                </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Andrés Leonardo Nieto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const whyHireMeToggle = document.getElementById('whyHireMeToggle');
+            const whyHireMeContent = document.getElementById('whyHireMeContent');
+            const whatICanContributeToggle = document.getElementById('whatICanContributeToggle');
+            const whatICanContributeContent = document.getElementById('whatICanContributeContent');
+
+            function toggleSection(header, content) {
+                header.classList.toggle('active');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    // Calculamos la altura total del contenido para una transición suave
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            }
+
+            // Ocultar inicialmente las secciones al cargar la página
+            whyHireMeContent.style.maxHeight = null;
+            whatICanContributeContent.style.maxHeight = null;
+
+            whyHireMeToggle.addEventListener('click', function() {
+                toggleSection(whyHireMeToggle, whyHireMeContent);
+            });
+
+            whatICanContributeToggle.addEventListener('click', function() {
+                toggleSection(whatICanContributeToggle, whatICanContributeContent);
+            });
+        });
+    </script>
+
+</body>
+</html>
